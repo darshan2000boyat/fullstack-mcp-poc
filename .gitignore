@@ -1,0 +1,22 @@
+# Strapi
+/strapi-base-v5/node_modules
+/strapi-base-v5/build
+/strapi-base-v5/.cache
+/strapi-base-v5/.env
+/strapi-base-v5/.env.local
+/strapi-base-v5/.env.development
+/strapi-base-v5/.env.production
+/strapi-base-v5/.env.test
+/strapi-base-v5/.env.*.local
+
+# Next base
+/nextjs-base/node_modules
+/nextjs-base/.next
+/nextjs-base/.env
+/nextjs-base/.env.local
+/nextjs-base/.env.development
+/nextjs-base/.env.production
+/nextjs-base/.env.test
+/nextjs-base/.env.*.local
+/nextjs-base/package-lock.json
+/nextjs-base/yarn.lock
