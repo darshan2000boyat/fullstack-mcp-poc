@@ -1,0 +1,113 @@
+<svg width="1400" height="860" viewBox="0 0 1400 860" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Fullstack MCP POC architecture diagram</title>
+  <desc id="desc">Architecture showing Monday.com and Figma feeding a parent-level Claude orchestrator, which plans work and dispatches frontend generation to Next.js and backend generation to Strapi, then reports back to Monday.</desc>
+  <defs>
+    <linearGradient id="bg" x1="140" y1="40" x2="1260" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6FAFF"/>
+      <stop offset="1" stop-color="#F7F4EA"/>
+    </linearGradient>
+    <linearGradient id="orchestratorGradient" x1="480" y1="150" x2="920" y2="370" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE4C8"/>
+      <stop offset="1" stop-color="#FFD08E"/>
+    </linearGradient>
+    <linearGradient id="frontendGradient" x1="980" y1="170" x2="1310" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DAF3E8"/>
+      <stop offset="1" stop-color="#B8E8D1"/>
+    </linearGradient>
+    <linearGradient id="backendGradient" x1="980" y1="410" x2="1310" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D9EDF8"/>
+      <stop offset="1" stop-color="#B9DFF5"/>
+    </linearGradient>
+    <linearGradient id="manifestGradient" x1="470" y1="470" x2="910" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F1E7FF"/>
+      <stop offset="1" stop-color="#E0D0FF"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#203047" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="16" markerHeight="16" refX="12" refY="8" orient="auto">
+      <path d="M1 1L13 8L1 15" stroke="#384860" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#DCE6F1" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1400" height="860" rx="32" fill="url(#bg)"/>
+  <rect width="1400" height="860" rx="32" fill="url(#grid)" opacity="0.4"/>
+
+  <text x="80" y="90" fill="#182434" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700">Fullstack MCP POC Architecture</text>
+  <text x="80" y="126" fill="#4A5A70" font-family="Arial, Helvetica, sans-serif" font-size="20">Single-source generation across Monday.com, Figma, Next.js 16, and Strapi v5</text>
+
+  <rect x="80" y="190" width="280" height="190" rx="28" fill="#FFFFFF" stroke="#BED1E5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="110" y="240" fill="#12355B" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Monday.com Board</text>
+  <text x="110" y="278" fill="#41546A" font-family="Arial, Helvetica, sans-serif" font-size="19">Assigned items and priorities</text>
+  <text x="110" y="310" fill="#41546A" font-family="Arial, Helvetica, sans-serif" font-size="19">Figma URL attached to task</text>
+  <text x="110" y="342" fill="#41546A" font-family="Arial, Helvetica, sans-serif" font-size="19">Status and QA updates</text>
+  <rect x="110" y="320" width="112" height="34" rx="17" fill="#FFF3D8"/>
+  <text x="128" y="343" fill="#8A5A00" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">Monday MCP</text>
+
+  <rect x="80" y="470" width="280" height="190" rx="28" fill="#FFFFFF" stroke="#BED1E5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="110" y="520" fill="#12355B" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Figma Design</text>
+  <text x="110" y="558" fill="#41546A" font-family="Arial, Helvetica, sans-serif" font-size="19">Frame or full screen source</text>
+  <text x="110" y="590" fill="#41546A" font-family="Arial, Helvetica, sans-serif" font-size="19">Design tokens, assets, spacing</text>
+  <text x="110" y="622" fill="#41546A" font-family="Arial, Helvetica, sans-serif" font-size="19">Reference for pixel fidelity</text>
+  <rect x="110" y="600" width="100" height="34" rx="17" fill="#E5F2FF"/>
+  <text x="132" y="623" fill="#16558E" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">Figma MCP</text>
+
+  <rect x="450" y="170" width="460" height="250" rx="34" fill="url(#orchestratorGradient)" stroke="#D7A053" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="490" y="224" fill="#4B2C00" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Claude Root Orchestrator</text>
+  <text x="490" y="268" fill="#65431B" font-family="Arial, Helvetica, sans-serif" font-size="20">Single source generation layer at the parent workspace</text>
+  <text x="490" y="315" fill="#5E4020" font-family="Arial, Helvetica, sans-serif" font-size="19">1. Pull assigned Monday items</text>
+  <text x="490" y="345" fill="#5E4020" font-family="Arial, Helvetica, sans-serif" font-size="19">2. Fetch Figma context and classify task scope</text>
+  <text x="490" y="375" fill="#5E4020" font-family="Arial, Helvetica, sans-serif" font-size="19">3. Break full screens into smaller reusable blocks</text>
+  <text x="490" y="405" fill="#5E4020" font-family="Arial, Helvetica, sans-serif" font-size="19">4. Dispatch FE and BE generation with shared rules</text>
+
+  <rect x="470" y="500" width="420" height="170" rx="28" fill="url(#manifestGradient)" stroke="#A889DB" stroke-width="2.2" filter="url(#shadow)"/>
+  <text x="505" y="550" fill="#3A215F" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700">Shared Work Manifest</text>
+  <text x="505" y="588" fill="#594078" font-family="Arial, Helvetica, sans-serif" font-size="19">Monday item metadata and Figma node info</text>
+  <text x="505" y="618" fill="#594078" font-family="Arial, Helvetica, sans-serif" font-size="19">Detected sections, reuse map, FE/BE targets</text>
+  <text x="505" y="648" fill="#594078" font-family="Arial, Helvetica, sans-serif" font-size="19">Verification checklist and delivery notes</text>
+
+  <rect x="980" y="180" width="330" height="190" rx="28" fill="url(#frontendGradient)" stroke="#5CB28A" stroke-width="2.2" filter="url(#shadow)"/>
+  <text x="1015" y="232" fill="#114B36" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Frontend Agent</text>
+  <text x="1015" y="270" fill="#2F5E4C" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700">nextjs-base</text>
+  <text x="1015" y="304" fill="#355E50" font-family="Arial, Helvetica, sans-serif" font-size="19">Next.js 16.1.3 and React 19</text>
+  <text x="1015" y="334" fill="#355E50" font-family="Arial, Helvetica, sans-serif" font-size="19">Reusable blocks, screens, and tokens</text>
+  <text x="1015" y="364" fill="#355E50" font-family="Arial, Helvetica, sans-serif" font-size="19">Responsive and accessible output</text>
+
+  <rect x="980" y="430" width="330" height="190" rx="28" fill="url(#backendGradient)" stroke="#4E9DCC" stroke-width="2.2" filter="url(#shadow)"/>
+  <text x="1015" y="482" fill="#12395B" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Backend Agent</text>
+  <text x="1015" y="520" fill="#255170" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700">strapi-base-v5</text>
+  <text x="1015" y="554" fill="#31556E" font-family="Arial, Helvetica, sans-serif" font-size="19">Strapi v5.36.1 content modeling</text>
+  <text x="1015" y="584" fill="#31556E" font-family="Arial, Helvetica, sans-serif" font-size="19">Blocks, elements, and dynamic zones</text>
+  <text x="1015" y="614" fill="#31556E" font-family="Arial, Helvetica, sans-serif" font-size="19">Schema-first reuse and CMS structure</text>
+
+  <rect x="980" y="690" width="330" height="100" rx="26" fill="#FFFFFF" stroke="#C7D4E4" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1015" y="734" fill="#18344F" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700">Delivery Output</text>
+  <text x="1015" y="766" fill="#4B6075" font-family="Arial, Helvetica, sans-serif" font-size="18">Pixel-aligned UI plus matching CMS schema</text>
+
+  <path d="M360 285H432" stroke="#384860" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M360 565H432" stroke="#384860" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M680 420V482" stroke="#384860" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M910 270H958" stroke="#384860" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M910 555H958" stroke="#384860" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M1145 370V408" stroke="#384860" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M1145 620V668" stroke="#384860" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M1145 740C1145 740 880 740 680 740C470 740 280 720 220 676" stroke="#384860" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <text x="370" y="268" fill="#55667C" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">Assigned item</text>
+  <text x="370" y="288" fill="#55667C" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">Figma URL</text>
+
+  <text x="370" y="548" fill="#55667C" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">Frame data</text>
+  <text x="370" y="568" fill="#55667C" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">tokens, assets</text>
+
+  <text x="700" y="456" fill="#55667C" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">plan and block map</text>
+  <text x="920" y="252" fill="#55667C" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">FE generation</text>
+  <text x="920" y="538" fill="#55667C" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">BE generation</text>
+  <text x="1164" y="400" fill="#55667C" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">shared output</text>
+  <text x="1164" y="648" fill="#55667C" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">validated build</text>
+  <text x="735" y="724" fill="#55667C" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">status sync, QA notes, completion</text>
+
+  <text x="470" y="720" fill="#7A6277" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">Screen task? Decompose into smaller blocks before dispatch.</text>
+</svg>

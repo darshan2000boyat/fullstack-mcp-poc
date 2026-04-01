@@ -1,0 +1,152 @@
+# Fullstack MCP POC
+
+This workspace is a proof of concept for Figma-driven fullstack generation where frontend and backend output are coordinated from one parent-level Claude orchestrator.
+
+![Fullstack architecture diagram](docs/architecture-diagram.svg)
+
+## Stack Overview
+
+| Layer | Path | Status | Purpose |
+| --- | --- | --- | --- |
+| Frontend | `nextjs-base/` | Existing | Next.js 16.1.3 + React 19 app for reusable blocks, screens, and page composition |
+| Backend | `strapi-base-v5/` | Existing | Strapi v5.36.1 app for blocks, elements, dynamic zones, and content modeling |
+| Orchestrator | Parent directory | Planned | Single source generation layer that reads Monday items, fetches Figma context, breaks large screens into blocks, and dispatches FE + BE generation |
+
+## Objective
+
+The goal is to make the parent-level Claude orchestrator the only intake point for design-to-code work.
+
+Each Monday.com item assigned to the developer should be enough to trigger:
+
+1. task intake from Monday.com
+2. Figma extraction from the linked frame or screen
+3. screen-to-block decomposition when the task is too large
+4. coordinated frontend generation in `nextjs-base`
+5. coordinated backend schema generation in `strapi-base-v5`
+6. QA, verification, and status sync back to Monday.com
+
+## Current Repo Signals
+
+The repository already contains app-level Claude workflows that make the orchestration approach viable:
+
+- `nextjs-base/.claude/commands/figma.md` handles Figma-to-Next.js component generation
+- `strapi-base-v5/.claude/commands/figma.md` handles Figma-to-Strapi block generation
+- `nextjs-base/ai-memory.md` already stores scanned frontend context for reuse decisions
+- both apps include `.claude/skills/*` and `QA-monday-push` prompts tied to Figma and Monday workflows
+
+This means the missing piece is the root orchestrator and shared task planning layer, not the app-specific generation logic.
+
+## Target Architecture
+
+### 1. Intake
+
+- Monday.com is the work queue
+- each assigned item must include the relevant Figma URL
+- the orchestrator reads only the items assigned to the current developer
+
+### 2. Analysis
+
+- the orchestrator reads the Figma frame or screen through Figma MCP
+- it decides whether the item is a single reusable block or a full screen
+- when the item is a full screen, the orchestrator splits it into smaller blocks for better reuse, pixel accuracy, and output quality
+
+### 3. Planning
+
+- a shared work manifest is created at the root level
+- the manifest records the Monday item, Figma metadata, detected sections, FE targets, BE targets, dependencies, and verification checklist
+
+### 4. Execution
+
+- FE generation runs inside `nextjs-base` using the existing Figma-oriented Claude commands and skills
+- BE generation runs inside `strapi-base-v5` using the existing Strapi Figma generator and schema conventions
+- both sides must reuse current components, tokens, blocks, and elements before creating anything new
+
+### 5. Verification
+
+- FE checks visual fidelity, responsiveness, accessibility, and token reuse
+- BE checks schema validity, reuse discipline, field modeling quality, and dynamic-zone registration
+- the orchestrator consolidates outputs into a single delivery unit
+
+### 6. Reporting
+
+- progress, QA notes, and final delivery status are pushed back to Monday.com
+- if one assigned item is decomposed into multiple sections, the orchestrator can report per-block status under the same task
+
+## Single Source Generation Model
+
+| Input | Orchestrator Action | Frontend Result | Backend Result |
+| --- | --- | --- | --- |
+| Single block with Figma URL | Generate directly | Reusable component or block | Matching Strapi block or element |
+| Full screen with Figma URL | Decompose before generation | Section components plus composed screen | Multiple reusable elements or blocks plus dynamic-zone wiring |
+| Existing screen update | Diff against current implementation | Patch existing components | Patch existing schemas |
+| Content-only change | Minimize UI regeneration | Limited FE change or no-op | Content model or content update |
+
+## Screen Decomposition Rules
+
+When the assigned task is a complete screen, the orchestrator should split it into blocks such as:
+
+- hero or banner
+- content sections
+- card grids or repeaters
+- forms
+- media modules
+- listings
+- CTA sections
+- shared layout areas like headers or footers
+
+Recommended rules:
+
+- isolate repeatable content into reusable Strapi elements
+- keep page composition at the block or dynamic-zone layer
+- keep frontend wrappers reusable and route-agnostic where possible
+- reuse tokens and shared UI before introducing new variants
+- prefer smaller verifiable units over one large generation pass
+
+## Suggested Root Structure
+
+```text
+fullstack-mcp-poc/
+├── README.me
+├── docs/
+│   └── architecture-diagram.svg
+├── orchestrator/              # planned
+│   ├── prompts/
+│   ├── manifests/
+│   ├── workflows/
+│   ├── logs/
+│   └── output/
+├── nextjs-base/
+└── strapi-base-v5/
+```
+
+## Delivery Flow
+
+1. A Monday item is assigned with a Figma URL.
+2. The root Claude orchestrator pulls the item through Monday MCP.
+3. The orchestrator fetches design context through Figma MCP.
+4. The orchestrator classifies the scope as block, partial screen, or full screen.
+5. If the scope is a full screen, the orchestrator decomposes it into smaller blocks.
+6. The FE generator writes or updates components in `nextjs-base`.
+7. The BE generator writes or updates schemas in `strapi-base-v5`.
+8. Validation runs on both sides.
+9. The orchestrator posts status, QA notes, and completion updates back to Monday.com.
+
+## Local Development
+
+Frontend:
+
+```bash
+cd nextjs-base
+npm run dev
+```
+
+Backend:
+
+```bash
+cd strapi-base-v5
+npm run dev
+```
+
+## Recommended Next Step
+
+Implement the parent-level orchestrator as the single intake layer. The app-level Figma generation workflows already exist, so the main work left is orchestration, block decomposition, shared manifests, and Monday status synchronization.
