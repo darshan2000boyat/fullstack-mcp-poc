@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_header_headers",
+  "info": {
+    "displayName": "Banner",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Banner": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images", "files", "videos", "audios"]
+    },
+    "Subtitle": {
+      "type": "string"
+    },
+    "Disabled": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

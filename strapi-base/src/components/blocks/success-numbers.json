@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_blocks_success_numbers",
+  "info": {
+    "displayName": "Success Numbers",
+    "icon": "chart-line",
+    "description": "Headline with large number display, profile avatars, and app store buttons"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "highlightedNumber": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "appStoreUrl": {
+      "type": "string"
+    },
+    "googlePlayUrl": {
+      "type": "string"
+    },
+    "profileImages": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": true
+    },
+    "Disabled": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

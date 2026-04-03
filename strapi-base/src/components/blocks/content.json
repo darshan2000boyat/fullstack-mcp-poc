@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_contents",
+  "info": {
+    "displayName": "Content",
+    "icon": "folder",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "Disabled": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

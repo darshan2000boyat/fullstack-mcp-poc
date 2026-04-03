@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_blocks_start_fundraises",
+  "info": {
+    "displayName": "Start Fundraise",
+    "icon": "rocket",
+    "description": "Centered heading, phone mockup image, floating icon badges, and CTA"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "phoneImage": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false
+    },
+    "iconBadges": {
+      "type": "json"
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "Disabled": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

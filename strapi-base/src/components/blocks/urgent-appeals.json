@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blocks_urgent_appeals",
+  "info": {
+    "displayName": "Urgent Appeals",
+    "icon": "bell",
+    "description": "Section heading with slider nav and a grid of campaign cards"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "exploreAllLabel": {
+      "type": "string"
+    },
+    "campaigns": {
+      "type": "json"
+    },
+    "Disabled": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

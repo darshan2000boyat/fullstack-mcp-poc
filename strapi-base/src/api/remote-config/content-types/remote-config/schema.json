@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "remote_configs",
+  "info": {
+    "singularName": "remote-config",
+    "pluralName": "remote-configs",
+    "displayName": "Remote Config"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeaderTrackingCodes": {
+      "type": "text"
+    },
+    "FooterTrackingCodes": {
+      "type": "text"
+    },
+    "GTMCode": {
+      "type": "string"
+    },
+    "RouteModels": {
+      "type": "json"
+    }
+  }
+}

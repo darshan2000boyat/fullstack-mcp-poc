@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_header_explore_header_blocks",
+  "info": {
+    "displayName": "Explore Header Blocks",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "ImgUrl": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "VideoUrl": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["videos"]
+    },
+    "ActionType": {
+      "type": "enumeration",
+      "enum": ["navigation", "web_link"]
+    },
+    "Route": {
+      "type": "string"
+    },
+    "Link": {
+      "type": "string"
+    },
+    "ButtonText": {
+      "type": "string"
+    },
+    "BlockIdentifier": {
+      "type": "string"
+    },
+    "MediaType": {
+      "type": "enumeration",
+      "enum": ["image", "video"],
+      "default": "image"
+    },
+    "Disabled": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

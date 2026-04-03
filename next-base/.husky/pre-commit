@@ -1,0 +1,2 @@
+node update-build-id.js
+git add BUILD_ID

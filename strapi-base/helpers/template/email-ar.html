@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email Template (RTL)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rubik&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body style="
+            margin: 0;
+            padding: 0;
+            background-color: #f6edde;
+            font-family: 'Noto Sans', Arial, sans-serif;
+            direction: rtl;
+        ">
+  <table role="presentation" width="640" align="center" cellpadding="0" cellspacing="0" border="0" style="
+                border: 1px solid #e3e3e3;
+                background-color: #f6edde;
+                font-family: 'Noto Sans', Arial, sans-serif;
+                direction: rtl;
+            ">
+    <!-- HEADER -->
+    <tr>
+      <td style="
+                        background-color: #ddcfb9;
+                        padding: 18px;
+                        text-align: center;
+                    ">
+        <img src="https://api-uae-pavilion.1020dev.com/uploads/uae_pavilion_logo_c5a6978c98.png" alt="UAE Pavilion Logo"
+          width="83" height="83" style="display: block; margin: auto" />
+      </td>
+    </tr>
+
+    <!-- BODY -->
+    <tr>
+      <td style="padding: 45px 53px">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="
+                            background-color: #ddcfb9;
+                            padding: 45px;
+                            text-align: center;
+                            font-family: 'Noto Sans', Arial, sans-serif;
+                            color: #242424;
+                            direction: rtl;
+                        ">
+          <tr>
+            <td>
+              <%= content %>
+                <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0"
+                  style="margin-top: 30px">
+                  <tr>
+                    <td style="
+                                                background-color: #242424;
+                                                padding: 16px 18px;
+                                                text-align: center;
+                                                border-radius: 4px;
+                                            ">
+                      <a href="/" style="
+                                                    color: #ffffff;
+                                                    text-decoration: none;
+                                                    text-transform: uppercase;
+                                                    font-weight: bold;
+                                                    font-size: 16px;
+                                                    display: block;
+                                                    font-family: 'Noto Sans',
+                                                        Arial, sans-serif;
+                                                ">
+                        زيارة الموقع
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- FOOTER -->
+    <tr>
+      <td style="
+                        background-color: #ddcfb9;
+                        padding: 25px;
+                        text-align: center;
+                        font-family: 'Noto Sans', Arial, sans-serif;
+                    ">
+        <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0"
+          style="margin-bottom: 20px">
+          <tr>
+            <td style="padding: 0 5px">
+              <a href="/">
+                <img src="https://api-uae-pavilion.1020dev.com/uploads/up_x_c88a8936c1.png" alt="Twitter/X" width="40"
+                  height="40" />
+              </a>
+            </td>
+            <td style="padding: 0 5px">
+              <a href="/">
+                <img src="https://api-uae-pavilion.1020dev.com/uploads/up_snapchat_06668d9949.png" alt="Snapchat"
+                  width="40" height="40" />
+              </a>
+            </td>
+            <td style="padding: 0 5px">
+              <a href="/">
+                <img src="https://api-uae-pavilion.1020dev.com/uploads/up_facebook_e8de204397.png" alt="Facebook"
+                  width="40" height="40" />
+              </a>
+            </td>
+            <td style="padding: 0 5px">
+              <a href="/">
+                <img src="https://api-uae-pavilion.1020dev.com/uploads/up_instagram_3551865fb8.png" alt="Instagram"
+                  width="40" height="40" />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <div style="opacity: 0.5; font-size: 16px; line-height: 1.4">
+          © 2025 جناح الإمارات. جميع الحقوق محفوظة.
+        </div>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>

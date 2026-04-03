@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://127.0.0.1:1337/api/sitemaps/1?populate=components)",
+      "Bash(curl -s 'http://127.0.0.1:1337/api/sitemaps/1?populate=components' -H 'Authorization: Bearer fdef8862d5d583abf552357c87379cb37f1041f26c552669d0d3935a7395bf832f3643d4b3f546404acbae4ce19709178310c38baa84e2e61a61164b7aca23a64fd7bdc226b3167ad40a453c6c0c03ba2a5017fb73209c2fbc06b8797e6e5cdb3883c0105655ebfea671b8c8463945148da4abc93bd4263b8bec885a2392b891')",
+      "Bash(node -e \"const d=require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\); const j=JSON.parse\\(d\\); console.log\\(JSON.stringify\\(j?.data?.attributes?.components?.map\\(c=>c.__component\\), null, 2\\)\\)\")"
+    ]
+  }
+}

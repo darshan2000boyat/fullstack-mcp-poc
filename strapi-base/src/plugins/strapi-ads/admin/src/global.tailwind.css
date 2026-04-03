@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+/* source('../../admin/'); */
+
+:root {
+  --chart-1: hsl(41, 22%, 65%);
+  --chart-2: hsl(185, 12%, 60%);
+  --chart-3: hsl(227, 7%, 40%);
+  --chart-4: hsl(84, 19%, 83%);
+  --chart-5: hsl(70, 19%, 77%);
+  --label: hsl(0, 0%, 45%);
+  --card-color: hsl(0, 0%, 100%);
+  --border-form: hsl(0, 0%, 90%);
+}
+
+.dark {
+  --chart-1: hsl(264, 24%, 49%);
+  --chart-2: hsl(162, 17%, 70%);
+  --chart-3: hsl(70, 19%, 77%);
+  --chart-4: hsl(303, 26%, 63%);
+  --chart-5: hsl(16, 24%, 64%);
+  --label: hsl(0, 0%, 80%);
+  --card-color: hsl(0, 0%, 15%);
+  --border-form: hsl(0, 0%, 25%);
+}
+
+@theme inline {
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-label: var(--label);
+  --color-card-color: var(--card-color);
+  --color-border-form: var(--border-form);
+}

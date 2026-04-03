@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "translations",
+  "info": {
+    "singularName": "translation",
+    "pluralName": "translations",
+    "displayName": "Translations"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "translationKey": {
+      "type": "string"
+    },
+    "translationEnglish": {
+      "type": "string"
+    },
+    "translationArabic": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sitemaps",
+  "info": {
+    "singularName": "sitemap",
+    "pluralName": "sitemaps",
+    "displayName": "1.0.0 - Sitemap",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    },
+    "webtools": {
+      "enabled": true
+    }
+  },
+  "attributes": {
+    "_softDeletedAt": {
+      "type": "datetime",
+      "configurable": false,
+      "writable": false,
+      "visible": false,
+      "private": true
+    },
+    "_softDeletedById": {
+      "type": "integer",
+      "configurable": false,
+      "writable": false,
+      "visible": false,
+      "private": true
+    },
+    "_softDeletedByType": {
+      "type": "string",
+      "configurable": false,
+      "writable": false,
+      "visible": false,
+      "private": true
+    },
+    "PageTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "PageDescription": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "PageSubtitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "PageUid": {
+      "type": "uid",
+      "targetField": "PageTitle"
+    },
+    "Breadcrumb": {
+      "displayName": "breadcrumb",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.breadcrumb",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "PageBreadcrumbTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "components": {
+      "type": "dynamiczone",
+      "components": [
+        "header.header",
+        "blocks.content",
+        "blocks.news-listing",
+        "blocks.google-map",
+        "blocks.hero-section",
+        "blocks.why-jood",
+        "blocks.let-us-help-you",
+        "blocks.urgent-appeals",
+        "blocks.key-features",
+        "blocks.success-numbers",
+        "blocks.start-fundraise",
+        "blocks.whats-new",
+        "blocks.meet-leaders",
+        "blocks.ticker-message"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Seo": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.seo"
+    },
+    "ParentPage": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sitemap.sitemap"
+    },
+    "HidePageTitle": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": false
+    },
+    "ExcludeFromSitemap": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "Icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "RequireAuth": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": false
+    },
+    "Disabled": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": false
+    },
+    "PageSlug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "customField",
+      "options": {
+        "targetField": "PageTitle"
+      },
+      "customField": "plugin::ab-custom-slug.ab-custom-slug"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_blocks_key_features",
+  "info": {
+    "displayName": "Key Features",
+    "icon": "star",
+    "description": "Full-bleed background image with feature list and description CTA"
+  },
+  "options": {},
+  "attributes": {
+    "sectionLabel": {
+      "type": "string"
+    },
+    "backgroundImage": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false
+    },
+    "features": {
+      "type": "json"
+    },
+    "description": {
+      "type": "text"
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "Disabled": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

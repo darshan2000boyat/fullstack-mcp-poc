@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blocks_why_joods",
+  "info": {
+    "displayName": "Why Jood",
+    "icon": "heart",
+    "description": "Eyebrow + heading with 4 category cards and a progress bar slider"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "json"
+    },
+    "Disabled": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

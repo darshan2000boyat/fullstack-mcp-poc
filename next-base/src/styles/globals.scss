@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: theme("colors.primary.DEFAULT");
+  font-size: clamp(0.625rem, calc(0.625rem + ((1vw - 0.9rem) * 1.25)), 0.6rem);
+  --original-font-size: clamp(
+    0.625rem,
+    calc(0.625rem + ((1vw - 0.9rem) * 1.25)),
+    0.6rem
+  );
+
+  @media (min-width: 2000px) {
+    font-size: clamp(0.625rem, calc(0.625rem + ((1vw - 0.9rem) * 1.25)), 1rem);
+    --original-font-size: clamp(
+      0.625rem,
+      calc(0.625rem + ((1vw - 0.9rem) * 1.25)),
+      1rem
+    );
+  }
+}
+
+input {
+  accent-color: var(--primary);
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  background: var(--primary);
+  color: #fff;
+}
+
+::selection {
+  background: var(--primary);
+  color: #fff;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html.windows {
+  body:not(.show-scrollbar)::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  body.show-scrollbar {
+    margin-right: -15px;
+  }
+}

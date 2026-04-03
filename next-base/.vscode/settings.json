@@ -1,0 +1,9 @@
+{
+    "chat.mcp.serverSampling": {
+        "nextjs-base/.vscode/mcp.json: next-devtools": {
+            "allowedModels": [
+                "copilot/claude-opus-4.5"
+            ]
+        }
+    }
+}

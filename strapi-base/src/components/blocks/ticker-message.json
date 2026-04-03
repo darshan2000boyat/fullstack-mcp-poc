@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_blocks_ticker_messages",
+  "info": {
+    "displayName": "Ticker Message",
+    "icon": "arrow-right",
+    "description": "Scrolling salmonOrange ticker strip with repeating text"
+  },
+  "options": {},
+  "attributes": {
+    "message": {
+      "type": "string"
+    },
+    "Disabled": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

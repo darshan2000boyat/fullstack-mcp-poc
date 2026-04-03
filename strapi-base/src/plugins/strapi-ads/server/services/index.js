@@ -1,0 +1,25 @@
+'use strict';
+
+const myService = require('./my-service');
+const ad = require('./ad');
+const adScreen = require('./ad-screen');
+const adSpot = require('./ad-spot');
+const adStat = require('./ad-stat');
+const campaignStat = require('./campaign-stat');
+const dailySystemStat = require('./daily-system-stat');
+const adType = require('./ad-type');
+const campaign = require('./campaign');
+const adsConfig = require('./ads-config');
+
+module.exports = {
+  myService,
+  campaign,
+  ad,
+  'ad-type': adType,
+  'ad-screen': adScreen,
+  'ad-spot': adSpot,
+  'ad-stat': adStat,
+  'campaign-stat': campaignStat,
+  'daily-system-stat': dailySystemStat,
+  'ads-config': adsConfig,
+};

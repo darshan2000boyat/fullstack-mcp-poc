@@ -1,0 +1,13 @@
+{
+  "extends": ["next/core-web-vitals", "plugin:tailwindcss/recommended"],
+  "rules": {
+    "tailwindcss/enforces-negative-arbitrary-values": "error",
+    "tailwindcss/enforces-shorthand": "error",
+    "tailwindcss/migration-from-tailwind-2": "error",
+    "tailwindcss/no-contradicting-classname": "error",
+    "tailwindcss/no-unnecessary-arbitrary-value": "error",
+    "tailwindcss/classnames-order": "off",
+    "tailwindcss/no-arbitrary-value": "off",
+    "tailwindcss/no-custom-classname": "off"
+  }
+}

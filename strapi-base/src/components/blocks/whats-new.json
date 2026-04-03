@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_blocks_whats_news",
+  "info": {
+    "displayName": "Whats New",
+    "icon": "newspaper",
+    "description": "Label, split heading, slider nav, and 3 article cards"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "headingLine1": {
+      "type": "string"
+    },
+    "headingLine2": {
+      "type": "string"
+    },
+    "exploreAllLabel": {
+      "type": "string"
+    },
+    "articles": {
+      "type": "json"
+    },
+    "Disabled": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

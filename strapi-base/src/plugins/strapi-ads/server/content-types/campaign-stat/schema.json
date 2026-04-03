@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "campaign_stats",
+  "info": {
+    "singularName": "campaign-stat",
+    "pluralName": "campaign-stats",
+    "displayName": "Campaign Stat",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "campaign_id": {
+      "type": "string"
+    },
+    "stat_date": {
+      "type": "date"
+    },
+    "impressions": {
+      "type": "biginteger",
+      "default": 0
+    },
+    "clicks": {
+      "type": "biginteger",
+      "default": 0
+    },
+    "total_impressions": {
+      "type": "biginteger",
+      "default": 0
+    },
+    "total_clicks": {
+      "type": "biginteger",
+      "default": 0
+    }
+  }
+}

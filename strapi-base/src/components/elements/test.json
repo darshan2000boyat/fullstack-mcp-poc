@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_elements_tests",
+  "info": {
+    "displayName": "test"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "asd": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "article_category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article-category.article-category"
+    }
+  }
+}
