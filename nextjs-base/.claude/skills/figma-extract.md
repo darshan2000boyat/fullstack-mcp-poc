@@ -37,6 +37,7 @@ Capture:
 - relative alignment
 - whether the design appears auto-layout or manually positioned
 - whether repeated cards overflow the frame
+- whether arrow buttons indicate previous/next carousel navigation
 
 If truncated, fetch metadata and recurse by child node.
 
@@ -56,6 +57,7 @@ Use screenshots to confirm:
 - icon orientation
 - overlap and layering
 - carousel cues such as cut-off cards at the frame edge
+- carousel cues such as left/right arrow controls around a repeated item group
 
 ### Call 4 - Component Map
 
@@ -87,6 +89,7 @@ Build an extraction summary that includes:
 - screenshot resolves ambiguity, not hierarchy
 - if the frame is manually positioned, preserve that signal for component generation
 - if repeated items overflow horizontally, flag the section as `carousel_candidate`
+- if arrow buttons clearly act as previous/next controls for repeated content, flag the section as `carousel_candidate`
 - if only desktop exists, note which mobile behaviors must be inferred later
 
 ---

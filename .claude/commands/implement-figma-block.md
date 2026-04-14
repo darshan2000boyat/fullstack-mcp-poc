@@ -60,6 +60,7 @@ Since there is no ticket description, infer scope from the Figma frame:
 - If a match exists, patch only the missing fields or registration.
 - On the frontend, prefer Tailwind config tokens, semantic utilities, plugin-defined classes, and configured breakpoints from `nextjs-base/tailwind.config.ts` before generic utility fallbacks.
 - Use raw utility classes only when the project Tailwind config and established local class patterns do not already cover the design requirement.
+- If the design includes previous/next arrow buttons for a repeated content group, treat the UI as a carousel and implement it with the project carousel pattern.
 
 ---
 

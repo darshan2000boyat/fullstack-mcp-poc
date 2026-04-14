@@ -38,6 +38,7 @@ Do not keep exploring once the decision is clear.
 ## Carousel Rule
 
 If repeated items visibly extend past the frame width, implement an Embla carousel.
+If the block includes arrow buttons that visually indicate previous/next navigation, also treat it as a carousel even when the screenshot does not show overflow clearly.
 
 - no Swiper substitution
 - no accidental overflow pretending to be a carousel

@@ -26,7 +26,7 @@ If Figma is not auto-layout:
 
 ## Carousel
 
-If repeated cards overflow the frame:
+If repeated cards overflow the frame, or if the design contains previous/next arrow controls for a repeated item group:
 - use Embla
 - preserve partial-next-slide cues
 - size slides deliberately for mobile and desktop

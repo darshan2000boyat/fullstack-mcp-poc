@@ -41,6 +41,7 @@ Create a React component that:
 - renders the design faithfully
 - uses Tailwind config primitives and existing local patterns first
 - reuses existing elements/components whenever possible
+- treats arrow-based repeated content navigation as a carousel requirement
 
 Do not generate a brand-new design system.
 
