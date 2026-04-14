@@ -3,7 +3,27 @@
     "allow": [
       "Bash(curl -s http://127.0.0.1:1337/api/sitemaps/1?populate=components)",
       "Bash(curl -s 'http://127.0.0.1:1337/api/sitemaps/1?populate=components' -H 'Authorization: Bearer fdef8862d5d583abf552357c87379cb37f1041f26c552669d0d3935a7395bf832f3643d4b3f546404acbae4ce19709178310c38baa84e2e61a61164b7aca23a64fd7bdc226b3167ad40a453c6c0c03ba2a5017fb73209c2fbc06b8797e6e5cdb3883c0105655ebfea671b8c8463945148da4abc93bd4263b8bec885a2392b891')",
-      "Bash(node -e \"const d=require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\); const j=JSON.parse\\(d\\); console.log\\(JSON.stringify\\(j?.data?.attributes?.components?.map\\(c=>c.__component\\), null, 2\\)\\)\")"
+      "Bash(node -e \"const d=require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\); const j=JSON.parse\\(d\\); console.log\\(JSON.stringify\\(j?.data?.attributes?.components?.map\\(c=>c.__component\\), null, 2\\)\\)\")",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__claude_ai_Figma__get_design_context",
+      "Bash(mkdir -p \"C:\\\\Users\\\\darsh\\\\OneDrive\\\\Desktop\\\\Workspace\\\\fullstack-mcp-poc\\\\strapi-base-v5\\\\src\\\\components\\\\blocks\")",
+      "Bash(mkdir -p \"C:\\\\Users\\\\darsh\\\\OneDrive\\\\Desktop\\\\Workspace\\\\fullstack-mcp-poc\\\\strapi-base-v5\\\\src\\\\api\\\\sitemap\\\\content-types\\\\sitemap\")",
+      "Bash(npx tsc:*)",
+      "Bash(rm \"C:\\\\Users\\\\darsh\\\\OneDrive\\\\Desktop\\\\Workspace\\\\fullstack-mcp-poc\\\\nextjs-base\\\\src\\\\app\\\\[locale]\\\\our-approach\\\\page.tsx\")",
+      "Bash(rmdir \"C:\\\\Users\\\\darsh\\\\OneDrive\\\\Desktop\\\\Workspace\\\\fullstack-mcp-poc\\\\nextjs-base\\\\src\\\\app\\\\[locale]\\\\our-approach\")",
+      "WebFetch(domain:www.figma.com)",
+      "WebSearch",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:3845/mcp)",
+      "Bash(curl -s http://127.0.0.1:3845/)",
+      "Bash(curl -s -X POST http://127.0.0.1:3845/mcp -H \"Content-Type: application/json\" -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"initialize\",\"params\":{\"protocolVersion\":\"2024-11-05\",\"capabilities\":{},\"clientInfo\":{\"name\":\"test\",\"version\":\"1.0\"}}}')",
+      "Bash(curl -s -X POST http://127.0.0.1:3845/mcp -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"initialize\",\"params\":{\"protocolVersion\":\"2024-11-05\",\"capabilities\":{},\"clientInfo\":{\"name\":\"test\",\"version\":\"1.0\"}}}')",
+      "mcp__Figma__get_metadata",
+      "mcp__Figma__get_design_context",
+      "mcp__Figma__get_screenshot",
+      "Bash(npm install:*)",
+      "Bash(rm -f strapi-base-v5/src/components/blocks/hero-banner.json strapi-base-v5/src/components/blocks/about-with-stats.json strapi-base-v5/src/components/blocks/purpose-statement.json strapi-base-v5/src/components/blocks/business-grid.json strapi-base-v5/src/components/blocks/testimonial.json strapi-base-v5/src/components/blocks/news-grid.json strapi-base-v5/src/components/elements/business-card-item.json)",
+      "Bash(rm -f nextjs-base/src/components/blocks/HeroBanner.tsx nextjs-base/src/components/blocks/AboutWithStats.tsx nextjs-base/src/components/blocks/PurposeStatement.tsx nextjs-base/src/components/blocks/BusinessGrid.tsx nextjs-base/src/components/blocks/Testimonial.tsx nextjs-base/src/components/blocks/NewsGrid.tsx)"
     ]
   }
 }

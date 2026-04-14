@@ -1,0 +1,50 @@
+- generic [ref=e6]:
+  - link "Figma logo that can be used to navigate to homepage" [ref=e8] [cursor=pointer]:
+    - /url: /
+    - generic "Figma logo that can be used to navigate to homepage" [ref=e9]:
+      - img [ref=e10]
+  - heading "The page you are looking for can't be found." [level=2] [ref=e17]
+  - generic [ref=e22]:
+    - link [ref=e24] [cursor=pointer]:
+      - /url: /
+      - img [ref=e26]
+    - generic [ref=e31]:
+      - link "FigJam" [ref=e32] [cursor=pointer]:
+        - /url: /figjam
+      - link "Enterprise" [ref=e33] [cursor=pointer]:
+        - /url: /enterprise
+      - link "Learn" [ref=e34] [cursor=pointer]:
+        - /url: https://help.figma.com
+      - link "Education" [ref=e35] [cursor=pointer]:
+        - /url: /education
+      - link "Careers" [ref=e36] [cursor=pointer]:
+        - /url: /careers
+      - link "Pricing" [ref=e37] [cursor=pointer]:
+        - /url: /pricing
+      - link "Developers" [ref=e38] [cursor=pointer]:
+        - /url: /developers
+      - link "Blog" [ref=e39] [cursor=pointer]:
+        - /url: /blog
+      - link "Downloads" [ref=e40] [cursor=pointer]:
+        - /url: /downloads
+      - link "Releases" [ref=e41] [cursor=pointer]:
+        - /url: https://www.figma.com/release-notes/
+      - link "Security" [ref=e42] [cursor=pointer]:
+        - /url: /security
+      - link "Legal" [ref=e43] [cursor=pointer]:
+        - /url: /legal
+      - link "Contact" [ref=e44] [cursor=pointer]:
+        - /url: /contact
+    - generic [ref=e45]:
+      - link [ref=e46] [cursor=pointer]:
+        - /url: https://twitter.com/figma
+        - img [ref=e48]
+      - link [ref=e50] [cursor=pointer]:
+        - /url: https://www.youtube.com/figmadesign
+        - img [ref=e52]
+      - link [ref=e54] [cursor=pointer]:
+        - /url: https://www.instagram.com/figmadesign
+        - img [ref=e56]
+      - link [ref=e58] [cursor=pointer]:
+        - /url: https://www.facebook.com/figmadesign
+        - img [ref=e60]

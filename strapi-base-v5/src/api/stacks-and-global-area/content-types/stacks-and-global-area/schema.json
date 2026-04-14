@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stacks_and_global_areas",
+  "info": {
+    "singularName": "stacks-and-global-area",
+    "pluralName": "stacks-and-global-areas",
+    "displayName": "Stacks and Global Area"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "PageTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "PageURL": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "PageTitle",
+      "required": true
+    },
+    "Blocks": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "blocks.test-block"
+      ]
+    }
+  }
+}

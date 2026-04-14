@@ -1,6 +1,0 @@
-node_modules
-build
-.cache
-docker-compose.yml
-Dockerfile
-*.md

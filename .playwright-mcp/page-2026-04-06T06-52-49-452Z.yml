@@ -1,0 +1,141 @@
+- generic [active] [ref=e1]:
+  - img "Background"
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img [ref=e6]
+      - region [ref=e44]:
+        - generic [ref=e46]:
+          - group [ref=e47]:
+            - heading "Future Account consectetur" [level=2] [ref=e48]
+            - generic [ref=e49]:
+              - img "Avatar 1" [ref=e51]
+              - img "Avatar 2" [ref=e53]
+              - img "Avatar 3" [ref=e55]
+              - paragraph [ref=e56]: "+99"
+            - paragraph [ref=e57]: More than 1k companies registered
+          - group [ref=e58]:
+            - heading "Future Account consectetur" [level=2] [ref=e59]
+            - generic [ref=e60]:
+              - img "Avatar 1" [ref=e62]
+              - img "Avatar 2" [ref=e64]
+              - img "Avatar 3" [ref=e66]
+              - paragraph [ref=e67]: "+99"
+            - paragraph [ref=e68]: More than 1k companies registered
+          - group [ref=e69]:
+            - heading "Future Account consectetur" [level=2] [ref=e70]
+            - generic [ref=e71]:
+              - img "Avatar 1" [ref=e73]
+              - img "Avatar 2" [ref=e75]
+              - img "Avatar 3" [ref=e77]
+              - paragraph [ref=e78]: "+99"
+            - paragraph [ref=e79]: More than 1k companies registered
+          - group [ref=e80]:
+            - heading "Future Account consectetur" [level=2] [ref=e81]
+            - generic [ref=e82]:
+              - img "Avatar 1" [ref=e84]
+              - img "Avatar 2" [ref=e86]
+              - img "Avatar 3" [ref=e88]
+              - paragraph [ref=e89]: "+99"
+            - paragraph [ref=e90]: More than 1k companies registered
+          - group [ref=e91]:
+            - heading "Future Account consectetur" [level=2] [ref=e92]
+            - generic [ref=e93]:
+              - img "Avatar 1" [ref=e95]
+              - img "Avatar 2" [ref=e97]
+              - img "Avatar 3" [ref=e99]
+              - paragraph [ref=e100]: "+99"
+            - paragraph [ref=e101]: More than 1k companies registered
+    - generic [ref=e105]:
+      - heading "Sign Up" [level=3] [ref=e106]
+      - paragraph [ref=e107]: Enter your details below to create your account and get started
+      - generic [ref=e108]:
+        - button "Sign up with Google" [ref=e109] [cursor=pointer]:
+          - generic [ref=e110]:
+            - img [ref=e111]
+            - generic [ref=e117]: Sign up with Google
+        - button "Sign up with Facebook" [ref=e118] [cursor=pointer]:
+          - generic [ref=e119]:
+            - img [ref=e120]
+            - generic [ref=e122]: Sign up with Facebook
+      - generic [ref=e123]:
+        - separator [ref=e124]
+        - generic [ref=e125]: Or
+        - separator [ref=e126]
+      - generic [ref=e127]:
+        - generic [ref=e128]:
+          - paragraph [ref=e129]: Add personal details
+          - generic [ref=e131]:
+            - textbox "First name *" [ref=e132]:
+              - /placeholder: First name
+            - generic [ref=e133]: First name *
+          - generic [ref=e135]:
+            - textbox "Last name *" [ref=e136]:
+              - /placeholder: Last name
+            - generic [ref=e137]: Last name *
+          - generic [ref=e139]:
+            - textbox "Display name *" [ref=e140]:
+              - /placeholder: Display name
+            - generic [ref=e141]: Display name *
+          - generic [ref=e143]:
+            - textbox "Email *" [ref=e144]:
+              - /placeholder: Type your email address
+            - generic [ref=e145]: Email *
+          - generic [ref=e147]:
+            - combobox [ref=e148] [cursor=pointer]:
+              - img "AE" [ref=e150]
+              - generic [ref=e155]: "+971"
+              - img [ref=e156]
+            - combobox [ref=e158]
+            - generic [ref=e159]:
+              - textbox "Phone number*" [ref=e160]:
+                - /placeholder: Phone number
+              - generic: Phone number*
+          - button "Country Of Residence" [ref=e163] [cursor=pointer]:
+            - generic: Country Of Residence
+            - img [ref=e164]
+        - generic [ref=e166]:
+          - paragraph [ref=e167]: Create password
+          - generic [ref=e169]:
+            - textbox "Password *" [ref=e170]:
+              - /placeholder: Type your password
+            - generic [ref=e171]: Password *
+            - button "Show password" [ref=e172] [cursor=pointer]:
+              - img [ref=e173]
+          - generic [ref=e177]:
+            - textbox "Confirm Password *" [ref=e178]:
+              - /placeholder: Type your password
+            - generic [ref=e179]: Confirm Password *
+            - button "Show password" [ref=e180] [cursor=pointer]:
+              - img [ref=e181]
+          - list [ref=e184]:
+            - listitem [ref=e185]:
+              - img [ref=e186]
+              - generic [ref=e189]: Minimum 8 characters
+            - listitem [ref=e190]:
+              - img [ref=e191]
+              - generic [ref=e194]: At least one lowercase letter
+            - listitem [ref=e195]:
+              - img [ref=e196]
+              - generic [ref=e199]: At least one uppercase letter
+            - listitem [ref=e200]:
+              - img [ref=e201]
+              - generic [ref=e204]: At least one number
+            - listitem [ref=e205]:
+              - img [ref=e206]
+              - generic [ref=e209]: At least one special character
+            - listitem [ref=e210]:
+              - img [ref=e211]
+              - generic [ref=e214]: Passwords must match
+        - button "Create Account" [ref=e215] [cursor=pointer]:
+          - generic [ref=e218]: Create Account
+      - paragraph [ref=e219]:
+        - text: Already a member?
+        - link "Sign in" [ref=e220] [cursor=pointer]:
+          - /url: /auth/login
+  - text: ;
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - alert [ref=e221]

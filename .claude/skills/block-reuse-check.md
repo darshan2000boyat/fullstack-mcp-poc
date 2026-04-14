@@ -12,8 +12,8 @@ Prevent duplicate block generation across Strapi and Next.
 ## Backend Reuse Check
 
 Inspect:
-- `strapi-base/src/components/**/*.json`
-- `strapi-base/src/api/sitemap/content-types/sitemap/schema.json`
+- `strapi-base-v5/src/components/**/*.json`
+- `strapi-base-v5/src/api/sitemap/content-types/sitemap/schema.json`
 
 For each candidate block:
 - compare file name
@@ -31,10 +31,10 @@ If a strong match exists:
 ## Frontend Reuse Check
 
 Inspect:
-- `next-base/src/components/blocks/**/*.tsx`
-- `next-base/src/components/blocks/FullBlockRenderer.tsx`
-- `next-base/src/typings/blocks.d.ts`
-- `next-base/ai-memory.md` component inventory if present
+- `nextjs-base/src/components/blocks/**/*.tsx`
+- `nextjs-base/src/components/blocks/FullBlockRenderer.tsx`
+- `nextjs-base/src/typings/blocks.d.ts`
+- `nextjs-base/ai-memory.md` component inventory if present
 
 For each candidate block:
 - compare component name

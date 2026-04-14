@@ -1,0 +1,24 @@
+- generic [ref=e1]:
+  - img "Background"
+  - generic [ref=e4]:
+    - generic:
+      - img "blue blur"
+    - generic [ref=e6]:
+      - link [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img [ref=e9]
+      - heading "Reset your password" [level=3] [ref=e47]
+      - paragraph [ref=e48]: Enter the email you use for your account.
+      - generic [ref=e49]:
+        - generic [ref=e51]:
+          - textbox "Email *" [ref=e52]:
+            - /placeholder: Your Email
+            - text: qa-test@example.com
+          - generic [ref=e53]: Email *
+        - button "Continue" [active] [ref=e54] [cursor=pointer]:
+          - generic [ref=e57]: Continue
+  - text: ;
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - alert [ref=e58]

@@ -20,16 +20,16 @@ Parse `$ARGUMENTS`:
 If missing, ask for it.
 
 Resolve these fixed project roots relative to the current repo:
-- frontend workspace: `next-base`
-- backend workspace: `strapi-base`
+- frontend workspace: `nextjs-base`
+- backend workspace: `strapi-base-v5`
 
 Before doing any generation:
-- read `next-base/ai-memory.md` if present
-- read `next-base/.claude/commands/figma.md`
-- read `next-base/.claude/skills/figma-component.md`
-- read `next-base/tailwind.config.ts`
-- read `strapi-base/src/api/sitemap/content-types/sitemap/schema.json`
-- read `next-base/src/components/blocks/FullBlockRenderer.tsx`
+- read `nextjs-base/ai-memory.md` if present
+- read `nextjs-base/.claude/commands/figma.md`
+- read `nextjs-base/.claude/skills/figma-component.md`
+- read `nextjs-base/tailwind.config.ts`
+- read `strapi-base-v5/src/api/sitemap/content-types/sitemap/schema.json`
+- read `nextjs-base/src/components/blocks/FullBlockRenderer.tsx`
 
 Then read and follow these root skills in order:
 1. `.claude/skills/monday-ticket-intake.md`
@@ -48,7 +48,7 @@ Then read and follow these root skills in order:
 - Never overwrite an existing Strapi component or Next block blindly.
 - Prefer reuse when a matching block already exists by name, structure, or props shape.
 - If a match exists, patch only the missing fields or registration.
-- On the frontend, prefer Tailwind config tokens, semantic utilities, plugin-defined classes, and configured breakpoints from `next-base/tailwind.config.ts` before generic utility fallbacks.
+- On the frontend, prefer Tailwind config tokens, semantic utilities, plugin-defined classes, and configured breakpoints from `nextjs-base/tailwind.config.ts` before generic utility fallbacks.
 - Use raw utility classes only when the project Tailwind config and established local class patterns do not already cover the design requirement.
 - If the ticket lacks a usable Figma URL, stop and report the blocker.
 
@@ -58,8 +58,8 @@ Then read and follow these root skills in order:
 
 Always execute in this order:
 
-1. Finish backend component decision and file changes in `strapi-base`
-2. Then build or reuse the frontend component in `next-base`
+1. Finish backend component decision and file changes in `strapi-base-v5`
+2. Then build or reuse the frontend component in `nextjs-base`
 3. Then register the block in `FullBlockRenderer`
 
 Do not generate frontend code for a block whose backend `_component` contract is still unclear.
