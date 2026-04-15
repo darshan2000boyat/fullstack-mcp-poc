@@ -117,13 +117,10 @@ export default factories.createCoreService(model, ({ strapi }) => ({
         const ALL_BLOCKS: any = strapi.config.get(
             "sitemap-components.ALL_BLOCKS"
         );
-        const CHANNEL: any = strapi.config.get("sitemap-components.CHANNEL");
         const GLOBAL_BLOCK = {
-            "blocks.global-block": {
+            "blocks.global-area": {
                 populate: {
-                    ...CHANNEL,
-                    Block: {
-                        fields: ["BlockName", "BlockUID"],
+                    Stacks: {
                         populate: {
                             Blocks: {
                                 on: ALL_BLOCKS,
@@ -154,7 +151,7 @@ export default factories.createCoreService(model, ({ strapi }) => ({
                         },
                     },
                 },
-                components: {
+                Blocks: {
                     on: {
                         ...ALL_BLOCKS,
                         ...GLOBAL_BLOCK,

@@ -6,10 +6,6 @@ const POPULATE_IMAGE = {
     populate: ["Image", "MobileImage"],
 };
 
-const POPULATE_LINK = {
-    fields: ["Title", "type", "url"],
-};
-
 const POPULATE_IMAGE_VIDEO_ITEM = {
     fields: ["VideoUrl", "Description", "MobileVideoURL"],
     populate: ["Image", "MobileImage"],
@@ -28,7 +24,6 @@ module.exports = () => {
         // population over broad populate rules so sitemap payloads stay stable.
         POPULATE_COMMON,
         POPULATE_IMAGE,
-        POPULATE_LINK,
         POPULATE_IMAGE_VIDEO_ITEM,
         POPULATE_BUTTON,
         ALL_BLOCKS: {
@@ -38,44 +33,22 @@ module.exports = () => {
                     Common: POPULATE_COMMON,
                 },
             },
-            "blocks.hero-banner": {
+            "blocks.global-area": {
                 populate: {
-                    Media: POPULATE_IMAGE_VIDEO_ITEM,
-                    Common: POPULATE_COMMON,
-                },
-            },
-            "blocks.about-with-stats": {
-                populate: {
-                    Link: POPULATE_LINK,
-                    Common: POPULATE_COMMON,
-                },
-            },
-            "blocks.purpose-statement": {
-                populate: {
-                    Media: POPULATE_IMAGE_VIDEO_ITEM,
-                    Common: POPULATE_COMMON,
-                },
-            },
-            "blocks.business-grid": {
-                populate: {
-                    Link: POPULATE_LINK,
-                    Items: {
+                    Stacks: {
                         populate: {
-                            Image: true,
-                            Link: POPULATE_LINK,
+                            Blocks: {
+                                on: {
+                                    "blocks.test-block": {
+                                        populate: {
+                                            Media: POPULATE_IMAGE_VIDEO_ITEM,
+                                            Common: POPULATE_COMMON,
+                                        },
+                                    },
+                                },
+                            },
                         },
                     },
-                    Common: POPULATE_COMMON,
-                },
-            },
-            "blocks.testimonial": {
-                populate: {
-                    Common: POPULATE_COMMON,
-                },
-            },
-            "blocks.news-grid": {
-                populate: {
-                    Link: POPULATE_LINK,
                     Common: POPULATE_COMMON,
                 },
             },

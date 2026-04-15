@@ -78,13 +78,7 @@
             },
             "components": [
                 "blocks.test-block",
-                "blocks.global-area",
-                "blocks.hero-banner",
-                "blocks.about-with-stats",
-                "blocks.purpose-statement",
-                "blocks.business-grid",
-                "blocks.testimonial",
-                "blocks.news-grid"
+                "blocks.global-area"
             ]
         }
     }
