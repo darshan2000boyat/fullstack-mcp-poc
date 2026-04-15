@@ -26,8 +26,9 @@ Inspect, in order, and stop once the decision is clear:
 1. Run `.claude/skills/3d-extract.md`
 2. Run `.claude/skills/3d-scene-planning.md`
 3. Run `.claude/skills/3d-animation-mapping.md`
-4. Run `.claude/skills/3d-component-implementation.md`
-5. Run `.claude/skills/3d-verify.md`
+4. **Create Strapi backend block** — follow the root `strapi-block-implementation.md` skill for the backend schema, dynamic zone registration, and populate rules. Every 3D block must have a Strapi component so it can be rendered via `FullBlockRenderer`.
+5. Run `.claude/skills/3d-component-implementation.md`
+6. Run `.claude/skills/3d-verify.md`
 
 ## Hard Rules
 
@@ -39,11 +40,13 @@ Inspect, in order, and stop once the decision is clear:
 - keep interaction and animation data-driven
 - prefer the shared 3D scaffold in `src/components/3d/` before inventing a new runtime structure
 - use `src/components/blocks/ThreeDShowcase.tsx` as the default reference shape when introducing a new standalone 3D block
+- **always create a Strapi backend block** so the 3D component is renderable from the CMS dynamic zone via `FullBlockRenderer`. Follow the root `strapi-block-implementation.md` skill for schema creation, sitemap registration, and populate rules. The frontend component must accept `{ block: <BlockProps> }` as its prop.
 
 ## Final Report
 
 - files changed
 - 3D mode chosen: faux-3D, hybrid, or real-time viewer
+- Strapi block UID and fields
 - asset assumptions
 - mobile strategy
 - reduced-motion strategy

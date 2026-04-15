@@ -1,13 +1,4 @@
-import {
-  PageBlock,
-  TestBlockProps,
-  HeroBannerProps,
-  AboutWithStatsProps,
-  PurposeStatementProps,
-  BusinessGridProps,
-  TestimonialProps,
-  NewsGridProps,
-} from "@/typings/blocks";
+import { PageBlock, TestBlockProps } from "@/typings/blocks";
 import { DynamicZoneProps } from "@/typings/common";
 import { RouteProps } from "@/typings/strapi";
 import dynamic from "next/dynamic";
