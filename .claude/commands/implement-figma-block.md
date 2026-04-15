@@ -60,6 +60,7 @@ Since there is no ticket description, infer scope from the Figma frame:
 - If a match exists, patch only the missing fields or registration.
 - On the frontend, prefer Tailwind config tokens, semantic utilities, plugin-defined classes, and configured breakpoints from `nextjs-base/tailwind.config.ts` before generic utility fallbacks.
 - Use raw utility classes only when the project Tailwind config and established local class patterns do not already cover the design requirement.
+- Try to follow grid layout over flex whenever needed and possible.
 
 ---
 

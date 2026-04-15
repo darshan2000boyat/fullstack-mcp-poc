@@ -31,7 +31,7 @@ export interface AboutWithStatsProps {
   Heading: string;
   Description: string;
   Link: LinkProps;
-  Stats: Array<{ number: string; label: string }>;
+  Stats: Array<{ id?: number; Number: string; Label: string }>;
 }
 
 export interface PurposeStatementProps {

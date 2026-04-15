@@ -1,0 +1,17 @@
+{
+    "collectionName": "components_elements_stat_items",
+    "info": {
+        "displayName": "Stat Item",
+        "icon": "chartBubble"
+    },
+    "options": {},
+    "attributes": {
+        "Number": {
+            "type": "string"
+        },
+        "Label": {
+            "type": "string"
+        }
+    },
+    "config": {}
+}

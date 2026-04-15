@@ -78,7 +78,8 @@
             },
             "components": [
                 "blocks.test-block",
-                "blocks.global-area"
+                "blocks.global-area",
+                "blocks.about-with-stats"
             ]
         }
     }

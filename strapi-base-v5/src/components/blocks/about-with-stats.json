@@ -1,0 +1,39 @@
+{
+    "collectionName": "components_blocks_about_with_stats",
+    "info": {
+        "displayName": "About With Stats",
+        "icon": "chartCircle"
+    },
+    "options": {},
+    "attributes": {
+        "Eyebrow": {
+            "type": "string"
+        },
+        "Heading": {
+            "type": "customField",
+            "customField": "plugin::ckeditor5.CKEditor",
+            "options": {
+                "preset": "defaultHtml"
+            }
+        },
+        "Description": {
+            "type": "text"
+        },
+        "Link": {
+            "type": "component",
+            "component": "elements.link",
+            "repeatable": false
+        },
+        "Stats": {
+            "type": "component",
+            "component": "elements.stat-item",
+            "repeatable": true
+        },
+        "Common": {
+            "type": "component",
+            "component": "elements.common",
+            "repeatable": false
+        }
+    },
+    "config": {}
+}

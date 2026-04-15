@@ -1,5 +1,27 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BlocksAboutWithStats extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_about_with_stats';
+  info: {
+    displayName: 'About With Stats';
+    icon: 'chartCircle';
+  };
+  attributes: {
+    Common: Schema.Attribute.Component<'elements.common', false>;
+    Description: Schema.Attribute.Text;
+    Eyebrow: Schema.Attribute.String;
+    Heading: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    Link: Schema.Attribute.Component<'elements.link', false>;
+    Stats: Schema.Attribute.Component<'elements.stat-item', true>;
+  };
+}
+
 export interface BlocksGlobalArea extends Struct.ComponentSchema {
   collectionName: 'components_blocks_global_areas';
   info: {
@@ -67,6 +89,18 @@ export interface ElementsLink extends Struct.ComponentSchema {
     Title: Schema.Attribute.String;
     type: Schema.Attribute.Enumeration<['internal', 'external']>;
     url: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsStatItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_stat_items';
+  info: {
+    displayName: 'Stat Item';
+    icon: 'chartBubble';
+  };
+  attributes: {
+    Label: Schema.Attribute.String;
+    Number: Schema.Attribute.String;
   };
 }
 
@@ -329,11 +363,13 @@ export interface HomeHomePageConfig extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'blocks.about-with-stats': BlocksAboutWithStats;
       'blocks.global-area': BlocksGlobalArea;
       'blocks.test-block': BlocksTestBlock;
       'elements.common': ElementsCommon;
       'elements.image-video-item': ElementsImageVideoItem;
       'elements.link': ElementsLink;
+      'elements.stat-item': ElementsStatItem;
       'elements.sticky-cards-item': ElementsStickyCardsItem;
       'elements.team-item': ElementsTeamItem;
       'footer.links-group': FooterLinksGroup;

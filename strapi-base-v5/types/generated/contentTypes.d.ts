@@ -732,7 +732,7 @@ export interface ApiSitemapSitemap extends Struct.CollectionTypeSchema {
   };
   attributes: {
     Blocks: Schema.Attribute.DynamicZone<
-      ['blocks.test-block', 'blocks.global-area']
+      ['blocks.test-block', 'blocks.global-area', 'blocks.about-with-stats']
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

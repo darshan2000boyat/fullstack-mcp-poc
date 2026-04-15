@@ -13,6 +13,9 @@ import { RouteProps } from "@/typings/strapi";
 import dynamic from "next/dynamic";
 
 const TestBlock = dynamic(() => import("@/components/blocks/TestBlock"));
+const AboutWithStats = dynamic(
+  () => import("@/components/blocks/AboutWithStats"),
+);
 
 interface FullBlockRendererPagesProps {
   blocks?: DynamicZoneProps[];
@@ -30,6 +33,13 @@ const FullBlockRendererPages = async ({
       case "blocks.test-block":
         return (
           <TestBlock block={block as TestBlockProps} key={`block-${index}`} />
+        );
+      case "blocks.about-with-stats":
+        return (
+          <AboutWithStats
+            block={block as AboutWithStatsProps}
+            key={`block-${index}`}
+          />
         );
       case "blocks.global-area":
         return (
