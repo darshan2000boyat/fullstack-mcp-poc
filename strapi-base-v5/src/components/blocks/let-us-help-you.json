@@ -1,0 +1,58 @@
+{
+  "collectionName": "components_blocks_let_us_help_you",
+  "info": {
+    "displayName": "Let Us Help You",
+    "description": "Teal visit-planner banner with eyebrow, three inline dropdown selectors (group, duration, date), explore CTA, background image and decorative peacock.",
+    "icon": "filter"
+  },
+  "options": {},
+  "attributes": {
+    "Eyebrow": {
+      "type": "string"
+    },
+    "HeadingPrefix": {
+      "type": "string"
+    },
+    "Connector1": {
+      "type": "string"
+    },
+    "Connector2": {
+      "type": "string"
+    },
+    "GroupSelector": {
+      "type": "component",
+      "component": "elements.visit-selector",
+      "repeatable": false
+    },
+    "DurationSelector": {
+      "type": "component",
+      "component": "elements.visit-selector",
+      "repeatable": false
+    },
+    "DateSelector": {
+      "type": "component",
+      "component": "elements.visit-selector",
+      "repeatable": false
+    },
+    "CTA": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "BackgroundImage": {
+      "type": "component",
+      "component": "elements.image-video-item",
+      "repeatable": false
+    },
+    "DecorativeImage": {
+      "type": "component",
+      "component": "elements.image-video-item",
+      "repeatable": false
+    },
+    "Common": {
+      "type": "component",
+      "component": "elements.common",
+      "repeatable": false
+    }
+  }
+}

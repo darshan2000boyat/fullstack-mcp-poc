@@ -45,6 +45,46 @@ module.exports = () => {
                     Common: POPULATE_COMMON,
                 },
             },
+            "blocks.divisions": {
+                populate: {
+                    Media: POPULATE_IMAGE_VIDEO_ITEM,
+                    Tabs: {
+                        populate: "*",
+                    },
+                    Common: POPULATE_COMMON,
+                },
+            },
+            "blocks.footprint-map": {
+                populate: {
+                    Countries: {
+                        populate: "*",
+                    },
+                    Common: POPULATE_COMMON,
+                },
+            },
+            "blocks.contact-us": {
+                populate: {
+                    ContactItems: true,
+                    SocialLinks: POPULATE_LINK,
+                    AddressImage: POPULATE_IMAGE_VIDEO_ITEM,
+                    AddressCTA: POPULATE_LINK,
+                    MapImage: POPULATE_IMAGE_VIDEO_ITEM,
+                    MapLink: POPULATE_LINK,
+                    DecorativeImage: POPULATE_IMAGE_VIDEO_ITEM,
+                    Common: POPULATE_COMMON,
+                },
+            },
+            "blocks.let-us-help-you": {
+                populate: {
+                    GroupSelector: { populate: { Options: true } },
+                    DurationSelector: { populate: { Options: true } },
+                    DateSelector: { populate: { Options: true } },
+                    CTA: POPULATE_LINK,
+                    BackgroundImage: POPULATE_IMAGE_VIDEO_ITEM,
+                    DecorativeImage: POPULATE_IMAGE_VIDEO_ITEM,
+                    Common: POPULATE_COMMON,
+                },
+            },
             "blocks.global-area": {
                 populate: {
                     Stacks: {

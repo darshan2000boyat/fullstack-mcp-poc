@@ -33,6 +33,8 @@ The repository already contains app-level Claude workflows that make the orchest
 - `strapi-base-v5/.claude/commands/figma.md` handles Figma-to-Strapi block generation
 - `nextjs-base/ai-memory.md` already stores scanned frontend context for reuse decisions
 - both apps include `.claude/skills/*` and `QA-monday-push` prompts tied to Figma and Monday workflows
+- root `.claude` commands can also drive Playwright-based page validation against Figma after page seeding
+- root skills now also define reusable company generation standards so future runs reuse shared UI primitives, Strapi patterns, and server-first data-fetching conventions
 
 This means the missing piece is the root orchestrator and shared task planning layer, not the app-specific generation logic.
 
@@ -130,6 +132,25 @@ fullstack-mcp-poc/
 7. The BE generator writes or updates schemas in `strapi-base-v5`.
 8. Validation runs on both sides.
 9. The orchestrator posts status, QA notes, and completion updates back to Monday.com.
+
+## Visual QA Loop
+
+For UI generation work, the preferred end state is not just "code generated" but "seeded page visually verified":
+
+1. generate or update the Strapi block and Next.js implementation
+2. seed the content and images into the sitemap page
+3. open the real page in a Playwright browser window
+4. compare the rendered page against the Figma frame
+5. patch the implementation and reseed as needed
+6. repeat until only minor rendering tolerance remains
+
+Use the root Claude command:
+
+```text
+/verify-figma-page <page_url> <figma_url>
+```
+
+This assumes Playwright MCP is configured headfully in the Claude client so the browser window is actually visible during the verification loop.
 
 ## Local Development
 

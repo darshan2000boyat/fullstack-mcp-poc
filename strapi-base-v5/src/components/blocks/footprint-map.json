@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_blocks_footprint_maps",
+  "info": {
+    "displayName": "Footprint Map",
+    "description": "Regional footprint block with a dotted world-map base and highlighted country overlay, plus a list of country chips.",
+    "icon": "earth"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Subtitle": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "Countries": {
+      "type": "component",
+      "component": "elements.division-tab",
+      "repeatable": true
+    },
+    "Common": {
+      "type": "component",
+      "component": "elements.common",
+      "repeatable": false
+    }
+  }
+}

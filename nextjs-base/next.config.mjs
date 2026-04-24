@@ -28,15 +28,24 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === "production",
   },
   images: {
+    // Local Strapi media frequently runs on localhost during development.
+    // Disable optimization in non-production so Next serves those URLs directly
+    // instead of rejecting them through the optimizer.
+    unoptimized: process.env.NODE_ENV !== "production",
     remotePatterns: [
       {
         protocol: "http",
         hostname: "localhost",
+        port: "1337",
+        pathname: "/**",
       },
       {
         protocol: "http",
         hostname: "127.0.0.1",
+        port: "1337",
+        pathname: "/**",
       },
+      new URL("https://picsum.photos/**"),
       {
         protocol: "https",
         hostname: "*.1020dev.com",
@@ -44,10 +53,6 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "*.juicer.io",
-      },
-      {
-        protocol: "https",
-        hostname: "picsum.photos",
       },
     ],
   },

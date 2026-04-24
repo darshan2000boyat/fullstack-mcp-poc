@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_elements_contact_info_items",
+  "info": {
+    "displayName": "Contact Info Item",
+    "icon": "phone"
+  },
+  "options": {},
+  "attributes": {
+    "IconType": {
+      "type": "enumeration",
+      "enum": ["email", "phone", "timings", "location"],
+      "default": "email",
+      "required": true
+    },
+    "Label": {
+      "type": "string"
+    },
+    "Value": {
+      "type": "string"
+    },
+    "Url": {
+      "type": "string"
+    },
+    "Underline": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

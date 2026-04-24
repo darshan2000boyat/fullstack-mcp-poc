@@ -32,6 +32,7 @@ Do not scan the whole repo if a reuse decision is already clear.
 - If `mobile_figma_url` exists, mobile is the base layout
 - If only desktop exists, infer mobile first, then layer desktop
 - If items overflow horizontally in Figma, implement an Embla carousel
+- If Figma shows a progress bar, scrubber, or slider-style progress indicator for repeated content, treat that section as a slider and implement it with Embla even if overflow is subtle in the frame
 - Preserve pixel fidelity over generic simplification
 - Use exact arbitrary values only when existing tokens/utilities cannot match the design closely enough
 - Keep output compatible with the Strapi block payload

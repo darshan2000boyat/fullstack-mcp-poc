@@ -37,6 +37,7 @@ Capture:
 - relative alignment
 - whether the design appears auto-layout or manually positioned
 - whether repeated cards overflow the frame
+- whether a progress bar, scrubber, or active-track indicator suggests slider pagination
 
 If truncated, fetch metadata and recurse by child node.
 
@@ -56,6 +57,7 @@ Use screenshots to confirm:
 - icon orientation
 - overlap and layering
 - carousel cues such as cut-off cards at the frame edge
+- slider cues such as progress bars or scrubber tracks tied to repeated content
 
 ### Call 4 - Component Map
 
@@ -87,6 +89,7 @@ Build an extraction summary that includes:
 - screenshot resolves ambiguity, not hierarchy
 - if the frame is manually positioned, preserve that signal for component generation
 - if repeated items overflow horizontally, flag the section as `carousel_candidate`
+- if a progress bar, scrubber, or slider-progress indicator appears for repeated content, also flag the section as `carousel_candidate` even when overflow is not obvious
 - if only desktop exists, note which mobile behaviors must be inferred later
 
 ---

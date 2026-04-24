@@ -75,6 +75,7 @@ If the design was flagged as a carousel candidate:
 - confirm an Embla carousel pattern is used
 - confirm the block does not rely on accidental overflow
 - confirm visible partial slides, gaps, and slide widths match Figma
+- confirm any progress bar, scrubber, or slider-progress indicator from Figma is implemented and synced to the active slide
 - confirm touch, keyboard, and button navigation behavior are wired correctly when controls exist
 
 ---

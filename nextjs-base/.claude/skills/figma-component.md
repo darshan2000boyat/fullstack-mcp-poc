@@ -38,10 +38,12 @@ Do not keep exploring once the decision is clear.
 ## Carousel Rule
 
 If repeated items visibly extend past the frame width, implement an Embla carousel.
+If Figma shows a progress bar, scrubber, or slider-style progress indicator for the section, treat it as a slider and implement it with Embla even when the frame does not clearly show overflow.
 
 - no Swiper substitution
 - no accidental overflow pretending to be a carousel
 - preserve visible partial-slide cues, slide widths, and gaps from Figma
+- preserve progress-indicator behavior and active-state feedback from Figma when present
 
 ## MFA Rule
 

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_division_tabs",
+  "info": {
+    "displayName": "Division Tab",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "IsActive": {
+      "type": "boolean"
+    }
+  }
+}

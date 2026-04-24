@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_blocks_divisions",
+  "info": {
+    "displayName": "Divisions",
+    "description": "Division showcase block with a large image, dark gradient overlay card, and sibling-division tab navigation"
+  },
+  "options": {},
+  "attributes": {
+    "IndexText": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Media": {
+      "type": "component",
+      "component": "elements.image-video-item",
+      "repeatable": false
+    },
+    "Tabs": {
+      "type": "component",
+      "component": "elements.division-tab",
+      "repeatable": true
+    },
+    "Common": {
+      "type": "component",
+      "component": "elements.common",
+      "repeatable": false
+    }
+  }
+}

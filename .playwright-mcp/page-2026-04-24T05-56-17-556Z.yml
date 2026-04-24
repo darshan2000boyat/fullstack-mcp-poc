@@ -1,0 +1,64 @@
+- generic [active] [ref=e20]:
+  - generic [ref=e5] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=e6]:
+      - img [ref=e7]
+    - generic [ref=e10]:
+      - button "Open issues overlay" [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]: "0"
+          - generic [ref=e14]: "1"
+        - generic [ref=e15]: Issue
+      - button "Collapse issues badge" [ref=e16]:
+        - img [ref=e17]
+  - alert [ref=e19]
+  - banner [ref=e21]:
+    - navigation [ref=e22]:
+      - link "Logo" [ref=e24] [cursor=pointer]:
+        - /url: /
+        - img "Logo" [ref=e25]
+      - generic:
+        - list
+      - button "Accessibility" [ref=e26] [cursor=pointer]
+  - list [ref=e28]
+  - generic [ref=e29]:
+    - generic [ref=e30]: This website uses cookies to improve user experience. By using our website you consent to all cookies in accordance with our Cookie Policy.
+    - button "Accept" [ref=e31] [cursor=pointer]
+  - generic [ref=e32]:
+    - text: /grand-hayatt
+    - generic [ref=e35]:
+      - paragraph [ref=e36]: Let us help you
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - generic [ref=e39]: Visiting as
+          - generic [ref=e40]:
+            - button "a Family" [ref=e41] [cursor=pointer]
+            - button "Toggle a Family" [ref=e42] [cursor=pointer]:
+              - img [ref=e43]
+        - generic [ref=e45]:
+          - generic [ref=e46]: for
+          - generic [ref=e47]:
+            - button "One Day" [ref=e48] [cursor=pointer]
+            - button "Toggle One Day" [ref=e49] [cursor=pointer]:
+              - img [ref=e50]
+        - generic [ref=e52]:
+          - generic [ref=e53]: "on"
+          - generic [ref=e54]:
+            - button "12th August 2025" [ref=e55] [cursor=pointer]
+            - button "Toggle 12th August 2025" [ref=e56] [cursor=pointer]:
+              - img [ref=e57]
+      - link "Explore" [ref=e59] [cursor=pointer]:
+        - /url: /grand-hayatt?group=a+Family&duration=One+Day&date=12th+August+2025
+        - text: Explore
+        - img [ref=e61]
+    - generic [ref=e64]:
+      - heading "Contact Us" [level=1] [ref=e67]
+      - paragraph [ref=e70]: Follow us
+      - generic [ref=e71]:
+        - generic [ref=e74]:
+          - generic [ref=e75]:
+            - img [ref=e76]
+            - generic [ref=e79]: Location
+          - paragraph [ref=e80]: 456 Example Avenue, Suite 789 Business Bay, Dubai, United Arab Emirates
+        - img [ref=e85]
+  - region "Notifications (F8)":
+    - list

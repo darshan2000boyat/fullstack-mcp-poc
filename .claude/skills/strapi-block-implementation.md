@@ -8,6 +8,8 @@ Create or patch the backend Strapi block contract first.
 - Figma reference
 - backend reuse decision
 
+Read `.claude/skills/generation-standards.md` before creating new Strapi structures.
+
 ---
 
 ## Target Files
@@ -43,6 +45,14 @@ Prefer simple Strapi field types:
 - `media`
 - `json`
 - `component` only if an existing nested component should be reused
+
+Before adding fields, check whether:
+
+- an existing collection type already models the entity
+- the design is actually a listing of existing entries
+- a relation is more correct than copying content into block fields
+
+If the page is fundamentally a listing page, prefer relation-aware or fetch-driven modeling instead of static repeated block items.
 
 #### When to use CKEditor5 instead of `text` or `string`
 
@@ -84,6 +94,16 @@ Good examples:
 - `Quote` — CKEditor (when part is highlighted)
 - `Link` — `component` (elements.link)
 - `Image` / `Media` — `media` or `component` (elements.image-video-item)
+
+### Formidable Rule
+
+If the design contains a form and Strapi Formidable can represent it, prefer:
+
+- a relation to the existing Formidable form record
+- block-level presentation fields only for surrounding content/layout
+- frontend rendering through the established form block pattern
+
+Do not create a fully custom per-field Strapi schema for a form if Formidable is the intended source of truth.
 
 Avoid dumping raw Figma styling into Strapi.
 

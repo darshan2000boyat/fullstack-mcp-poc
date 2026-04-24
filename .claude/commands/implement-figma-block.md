@@ -7,6 +7,7 @@ Implement a block end-to-end from a Figma URL directly (no Monday ticket require
 3. generating or reusing the Strapi block schema
 4. generating or reusing the Next.js block component
 5. registering the block in the frontend renderer
+6. validating the seeded page in Playwright against Figma when a page URL is available
 
 **Usage:** `/implement-figma-block <figma_url> [block_name]`
 
@@ -31,9 +32,11 @@ Before doing any generation:
 - read `nextjs-base/src/components/blocks/FullBlockRenderer.tsx`
 
 Then read and follow these root skills in order:
-1. `.claude/skills/block-reuse-check.md`
-2. `.claude/skills/strapi-block-implementation.md`
-3. `.claude/skills/next-block-implementation.md`
+1. `.claude/skills/generation-standards.md`
+2. `.claude/skills/block-reuse-check.md`
+3. `.claude/skills/strapi-block-implementation.md`
+4. `.claude/skills/next-block-implementation.md`
+5. `.claude/skills/post-generation-visual-qa.md` when a real seeded page URL exists
 
 > Note: `.claude/skills/monday-ticket-intake.md` is **skipped** — there is no Monday ticket. Treat the Figma URL as the sole source of truth.
 
@@ -85,5 +88,7 @@ Report:
 3. backend action taken
 4. frontend action taken
 5. renderer registration result
-6. files changed
-7. any manual follow-up needed
+6. page URL validated in Playwright, if applicable
+7. visual QA result against Figma, if applicable
+8. files changed
+9. any manual follow-up needed

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_elements_visit_selectors",
+  "info": {
+    "displayName": "Visit Selector",
+    "icon": "filter",
+    "description": "Inline dropdown selector used inside the Let Us Help You heading."
+  },
+  "options": {},
+  "attributes": {
+    "Variant": {
+      "type": "enumeration",
+      "enum": ["primary", "accent"],
+      "default": "primary",
+      "required": true
+    },
+    "Placeholder": {
+      "type": "string"
+    },
+    "Options": {
+      "type": "component",
+      "component": "elements.visit-option",
+      "repeatable": true
+    }
+  }
+}

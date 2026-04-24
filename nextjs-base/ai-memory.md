@@ -272,3 +272,10 @@ _No icons found in public/icon/ or public/other/. Icons are in public/images/ (3
 ## Notes
 
 > Add project-specific notes here. This section is preserved across /scan runs.
+
+- Generation standard: assume most new Figma work should reuse existing company patterns before creating new structures.
+- Reusable interaction primitives belong in `src/components/ui` when they are likely to recur across pages.
+- Reusable form-field pieces belong in `src/components/elements/form-fields`.
+- Listing pages should default to a server wrapper plus client child pattern, with server-side data fetched through `src/lib/methods.server.ts`.
+- When a relevant collection type already exists in Strapi, prefer relations or fetch-driven rendering over duplicating the content as static block fields.
+- Forms should prefer Strapi Formidable as the source of truth, with frontend rendering built on the existing forms block/form-fields patterns.

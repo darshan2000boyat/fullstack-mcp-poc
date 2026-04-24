@@ -79,7 +79,11 @@
             "components": [
                 "blocks.test-block",
                 "blocks.global-area",
-                "blocks.about-with-stats"
+                "blocks.about-with-stats",
+                "blocks.divisions",
+                "blocks.footprint-map",
+                "blocks.contact-us",
+                "blocks.let-us-help-you"
             ]
         }
     }

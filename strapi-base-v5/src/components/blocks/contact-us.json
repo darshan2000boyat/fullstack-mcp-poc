@@ -1,0 +1,63 @@
+{
+  "collectionName": "components_blocks_contact_us",
+  "info": {
+    "displayName": "Contact Us",
+    "description": "Contact Us hero block with heading, contact info grid, social links, address card, and map panel.",
+    "icon": "envelop"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "ContactItems": {
+      "type": "component",
+      "component": "elements.contact-info-item",
+      "repeatable": true
+    },
+    "FollowUsLabel": {
+      "type": "string"
+    },
+    "SocialLinks": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    },
+    "AddressImage": {
+      "type": "component",
+      "component": "elements.image-video-item",
+      "repeatable": false
+    },
+    "AddressLocationLabel": {
+      "type": "string"
+    },
+    "AddressText": {
+      "type": "text"
+    },
+    "AddressCTA": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "MapImage": {
+      "type": "component",
+      "component": "elements.image-video-item",
+      "repeatable": false
+    },
+    "MapLink": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "DecorativeImage": {
+      "type": "component",
+      "component": "elements.image-video-item",
+      "repeatable": false
+    },
+    "Common": {
+      "type": "component",
+      "component": "elements.common",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_elements_visit_options",
+  "info": {
+    "displayName": "Visit Option",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string",
+      "required": true
+    },
+    "Value": {
+      "type": "string"
+    }
+  }
+}

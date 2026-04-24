@@ -19,6 +19,7 @@ Before editing frontend files:
 - read `nextjs-base/.claude/skills/figma-component.md`
 - read `nextjs-base/.claude/skills/figma-responsive.md`
 - read `nextjs-base/.claude/skills/figma-a11y.md`
+- read `.claude/skills/generation-standards.md`
 
 Reuse the existing project style and block conventions.
 
@@ -41,6 +42,7 @@ Create a React component that:
 - renders the design faithfully
 - uses Tailwind config primitives and existing local patterns first
 - reuses existing elements/components whenever possible
+- promotes repeated CTA/input/card/control patterns into `nextjs-base/src/components/ui` or existing reusable layers instead of hardcoding them in one block
 
 Do not generate a brand-new design system.
 
@@ -144,6 +146,20 @@ If the repo uses explicit block interfaces in `src/typings/blocks.d.ts`:
 If an existing generic dynamic-zone shape is enough:
 - do not add unnecessary typings noise
 
+### Step 2a - Server And Client Boundaries
+
+When a page or block depends on backend-fetched content:
+
+- fetch on the server first where possible
+- use `nextjs-base/src/lib/methods.server.ts`
+- wrap interactive UI in a child client component only when browser state is actually needed
+
+For listing pages, the default pattern is:
+- server wrapper for data fetching
+- client child for interactions
+
+Do not default to client-side fetching for listing content.
+
 ### Step 3 - Register Renderer Mapping
 
 Update:
@@ -211,7 +227,7 @@ How to identify CKEditor fields — check the corresponding Strapi component JSO
 
 This applies to **every** block component, not just headings — any field backed by CKEditor must use `<RichText />`.
 
-### Animated Stat Counters — Mandatory Pattern
+### Animated Stat Counters – Mandatory Pattern
 
 When a block contains numeric stats/counters (e.g. "11,000 People", "4 Decades", "9 Countries"), the numbers **must always** use a GSAP rolling/counting animation — never render as static text.
 

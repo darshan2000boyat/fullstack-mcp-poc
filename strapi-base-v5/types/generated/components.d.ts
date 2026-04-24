@@ -22,6 +22,75 @@ export interface BlocksAboutWithStats extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksContactUs extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_contact_us';
+  info: {
+    description: 'Contact Us hero block with heading, contact info grid, social links, address card, and map panel.';
+    displayName: 'Contact Us';
+    icon: 'envelop';
+  };
+  attributes: {
+    AddressCTA: Schema.Attribute.Component<'elements.link', false>;
+    AddressImage: Schema.Attribute.Component<
+      'elements.image-video-item',
+      false
+    >;
+    AddressLocationLabel: Schema.Attribute.String;
+    AddressText: Schema.Attribute.Text;
+    Common: Schema.Attribute.Component<'elements.common', false>;
+    ContactItems: Schema.Attribute.Component<
+      'elements.contact-info-item',
+      true
+    >;
+    DecorativeImage: Schema.Attribute.Component<
+      'elements.image-video-item',
+      false
+    >;
+    FollowUsLabel: Schema.Attribute.String;
+    Heading: Schema.Attribute.String;
+    MapImage: Schema.Attribute.Component<'elements.image-video-item', false>;
+    MapLink: Schema.Attribute.Component<'elements.link', false>;
+    SocialLinks: Schema.Attribute.Component<'elements.link', true>;
+  };
+}
+
+export interface BlocksDivisions extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_divisions';
+  info: {
+    description: 'Division showcase block with a large image, dark gradient overlay card, and sibling-division tab navigation';
+    displayName: 'Divisions';
+  };
+  attributes: {
+    Common: Schema.Attribute.Component<'elements.common', false>;
+    Description: Schema.Attribute.Text;
+    IndexText: Schema.Attribute.String;
+    Media: Schema.Attribute.Component<'elements.image-video-item', false>;
+    Tabs: Schema.Attribute.Component<'elements.division-tab', true>;
+    Title: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksFootprintMap extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_footprint_maps';
+  info: {
+    description: 'Regional footprint block with a dotted world-map base and highlighted country overlay, plus a list of country chips.';
+    displayName: 'Footprint Map';
+    icon: 'earth';
+  };
+  attributes: {
+    Common: Schema.Attribute.Component<'elements.common', false>;
+    Countries: Schema.Attribute.Component<'elements.division-tab', true>;
+    Subtitle: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    Title: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksGlobalArea extends Struct.ComponentSchema {
   collectionName: 'components_blocks_global_areas';
   info: {
@@ -34,6 +103,37 @@ export interface BlocksGlobalArea extends Struct.ComponentSchema {
       'oneToOne',
       'api::stacks-and-global-area.stacks-and-global-area'
     >;
+  };
+}
+
+export interface BlocksLetUsHelpYou extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_let_us_help_you';
+  info: {
+    description: 'Teal visit-planner banner with eyebrow, three inline dropdown selectors (group, duration, date), explore CTA, background image and decorative peacock.';
+    displayName: 'Let Us Help You';
+    icon: 'filter';
+  };
+  attributes: {
+    BackgroundImage: Schema.Attribute.Component<
+      'elements.image-video-item',
+      false
+    >;
+    Common: Schema.Attribute.Component<'elements.common', false>;
+    Connector1: Schema.Attribute.String;
+    Connector2: Schema.Attribute.String;
+    CTA: Schema.Attribute.Component<'elements.link', false>;
+    DateSelector: Schema.Attribute.Component<'elements.visit-selector', false>;
+    DecorativeImage: Schema.Attribute.Component<
+      'elements.image-video-item',
+      false
+    >;
+    DurationSelector: Schema.Attribute.Component<
+      'elements.visit-selector',
+      false
+    >;
+    Eyebrow: Schema.Attribute.String;
+    GroupSelector: Schema.Attribute.Component<'elements.visit-selector', false>;
+    HeadingPrefix: Schema.Attribute.String;
   };
 }
 
@@ -61,6 +161,37 @@ export interface ElementsCommon extends Struct.ComponentSchema {
     BlockID: Schema.Attribute.String;
     HideBlock: Schema.Attribute.Boolean;
     NoBottomSpace: Schema.Attribute.Boolean;
+  };
+}
+
+export interface ElementsContactInfoItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_contact_info_items';
+  info: {
+    displayName: 'Contact Info Item';
+    icon: 'phone';
+  };
+  attributes: {
+    IconType: Schema.Attribute.Enumeration<
+      ['email', 'phone', 'timings', 'location']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'email'>;
+    Label: Schema.Attribute.String;
+    Underline: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    Url: Schema.Attribute.String;
+    Value: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsDivisionTab extends Struct.ComponentSchema {
+  collectionName: 'components_elements_division_tabs';
+  info: {
+    displayName: 'Division Tab';
+    icon: 'bulletList';
+  };
+  attributes: {
+    IsActive: Schema.Attribute.Boolean;
+    Label: Schema.Attribute.String;
   };
 }
 
@@ -135,6 +266,34 @@ export interface ElementsTeamItem extends Struct.ComponentSchema {
     Name: Schema.Attribute.String;
     PhoneNumber: Schema.Attribute.String;
     Profile: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface ElementsVisitOption extends Struct.ComponentSchema {
+  collectionName: 'components_elements_visit_options';
+  info: {
+    displayName: 'Visit Option';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Label: Schema.Attribute.String & Schema.Attribute.Required;
+    Value: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsVisitSelector extends Struct.ComponentSchema {
+  collectionName: 'components_elements_visit_selectors';
+  info: {
+    description: 'Inline dropdown selector used inside the Let Us Help You heading.';
+    displayName: 'Visit Selector';
+    icon: 'filter';
+  };
+  attributes: {
+    Options: Schema.Attribute.Component<'elements.visit-option', true>;
+    Placeholder: Schema.Attribute.String;
+    Variant: Schema.Attribute.Enumeration<['primary', 'accent']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'primary'>;
   };
 }
 
@@ -364,14 +523,22 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'blocks.about-with-stats': BlocksAboutWithStats;
+      'blocks.contact-us': BlocksContactUs;
+      'blocks.divisions': BlocksDivisions;
+      'blocks.footprint-map': BlocksFootprintMap;
       'blocks.global-area': BlocksGlobalArea;
+      'blocks.let-us-help-you': BlocksLetUsHelpYou;
       'blocks.test-block': BlocksTestBlock;
       'elements.common': ElementsCommon;
+      'elements.contact-info-item': ElementsContactInfoItem;
+      'elements.division-tab': ElementsDivisionTab;
       'elements.image-video-item': ElementsImageVideoItem;
       'elements.link': ElementsLink;
       'elements.stat-item': ElementsStatItem;
       'elements.sticky-cards-item': ElementsStickyCardsItem;
       'elements.team-item': ElementsTeamItem;
+      'elements.visit-option': ElementsVisitOption;
+      'elements.visit-selector': ElementsVisitSelector;
       'footer.links-group': FooterLinksGroup;
       'footer.social-links': FooterSocialLinks;
       'form.dependency': FormDependency;
